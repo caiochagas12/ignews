@@ -6,6 +6,7 @@ export function SignInButton(){
 const isUserLoggedIn = true;
 
     return isUserLoggedIn ? (
+        
 <button
  type="button"
  className={styles.signInButton}
