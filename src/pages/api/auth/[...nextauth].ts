@@ -28,12 +28,12 @@ export default NextAuth({
                         )
                     ),
                      q.Create(
-                            q.Collection('users'),
+                        q.Collection('users'),
                             {data:{email}}
                                 ),
                                 q.Get(
                                     q.Match(
-                                        q.Index('user_by_email'),
+                                            q.Index('user_by_email'),
                                         q.Casefold(user.email)
                                     )
                                 )
