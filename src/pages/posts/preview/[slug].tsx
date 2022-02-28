@@ -56,6 +56,14 @@ export default function PostPreview({post}:PostPreviewProps){
     );
 }
 
+export const getStaticPaths =() =>{
+
+    return{
+        path:[],
+        fallback:'boolean'
+    }
+}
+
 export const getStaticProps:GetStaticProps = async({params}) =>{
     const {slug} = params;
 
