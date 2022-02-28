@@ -56,11 +56,11 @@ export default function PostPreview({post}:PostPreviewProps){
     );
 }
 
-export const getStaticPaths {
-  return {
-    paths: [],
-    fallback: 'true',
-  }
+export const getStaticPaths=() => {
+    return{
+        paths:[],
+        fallback:'true'
+    }
 }
 
 
