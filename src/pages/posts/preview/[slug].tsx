@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { GetStaticProps }  from 'next'
+import { GetStaticPaths, GetStaticProps } from "next";
 import { RichText } from 'prismic-dom';
 import { getPrismicClient } from '../../../services/prismic'
 
@@ -56,12 +56,13 @@ export default function PostPreview({post}:PostPreviewProps){
     );
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
-    fallback: true,
+    fallback: 'blocking',
   }
 }
+
 
 export const getStaticProps:GetStaticProps = async({params}) =>{
     const {slug} = params;
